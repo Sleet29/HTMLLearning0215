@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> FORM 입력 예제</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<h3>다양한 입력 폼</h3>
+	<form method= "get" action="result.html">
+		<fieldset>
+		
+	<p>
+	성명:
+	<input value="" name="id"><br>
+	
+	성별:
+	<input type = "radio" name ="gender" value = "male">남성
+	<input type = "radio" name ="gender" value = "female">여성<br>
+	
+	
+	과목:
+	<select name = "language" size = "1" >
+ 	 	<option value = "Java" selected>자바</option>
+ 	 	<option value = "HTML" selected>HTML</option>
+ 	 </select>
+	</p>
+	
+	<p>
+	구입희망분야(복수선택 가능)<br>
+	- 분야: 
+	<input type="checkbox" name="field" value="computer">컴퓨터
+ 		<input type="checkbox" name="field" value="economy">경제
+ 		<input type="checkbox" name="field" value="common_sense">상식
+ 	</p>
+ 	
+ 	
+ 	
+ 	비고:<br>
+ 	<div class="input__container">
+         <label for="message"></label>
+         <textarea id="message" name="message" rows="4" cols="40" required>나는 <textarea> 입니다. 속성은 rwos="5" cols="40" 입니다.</textarea></textarea>
+       </div>
+ 	
+ 	
+	
+	<input type="hidden" name="userIP" value ="1234">
+			파일 업로드하기
+		<br>
+		<p><input type="file" name="myfile"> </p>
+		<hr>
+		<input type="submit" value="전송">
+		<input type="reset" value="취소">	
+	</fieldset>
+	</form>
+</body>
+</html>
