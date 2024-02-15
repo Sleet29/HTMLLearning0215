@@ -1,0 +1,54 @@
+<!-- 
+도서예약대출
+1. 성명 : type="text" name="p_name" 필수항목
+2. 전화 : type="tel"  name="p_tel"  필수항목
+		 패턴지정(국번:2~3자리, 가운데 자리 :3~4자리, 마지막 자리 : 4자리
+		 국번과 가운데 자리 사이, 가운데 자리와 마지막 자리 사이에 "-"를 사용합니다.)
+3. 이메일 : type="email"		name="p_mail" 필수항목
+
+4. 예약희망일 : 연도-월-일 표시 , 오늘날짜 부터 선택(이전 날짜 비활성화) , 필수항목
+
+5. 수령시간 : 9시부터 18시까지, 필수항목
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<title>도서 대출 예제</title>
+	</head>
+
+	<body>
+	
+	
+	<form action = "result.html">
+	  <fieldset>
+	성명 :
+	<input value="" name="id"><br>
+	
+	전화 : <input type = "tel"
+						placeholder = "00*-000*-0000"
+						name = "tel" 
+						pattern = "[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}"
+						required><br>
+						
+	이메일 : <input type = "email" name="email" required>
+	
+	<br><br>
+	
+	도서명 :
+	<input value="" name="book"><br>
+						
+	<hr>
+	<p><input type="submit" value = "예약하기"> </p>
+	
+	  </fieldset>
+	</form>
+	
+	
+	</body>
+</html>
