@@ -10,20 +10,25 @@
 		a:visited는 방문한 링크의 경우를 의미합니다.
 		-->
 		<style>
-			a:link{color: orange;}
+			a { text-decoration: none;} /* 밑줄이 사라진다*/
+			a:visited { color: red;}
 			
-			/* text-decoration: none; 밑줄이 사라집니다*/
-			a:hover { text-decoration: none; color: black}
-			
-			a:visited {color: red;}			
-			a:active {color: green;}			
+				/*
+				  attr(href)함수는 href의 속성값을 표시합니다.
+				 */
+				 
+				a:link::after {content: ' - ' attr(href);}
+				
+				a::after { content: ' - href 없어요 - ' ;}	 
 		</style>
    </head>
     <body>
     	<h1>링크 선택자</h1>
+    	
     	<!-- href속성을 적용하지 않아서 스타일 적용되지 않음 -->
     	<h1><a>Nothing</a></h1>
-    	<h1><a href="https://www.daum.net">daum</a></h1>
-    	<h1><a href="https://www.w3schools.com">w3schools</a></h1>
+    	
+    	<h1><a href="https://www.github.com">Github</a></h1>
+    	<h1><a href="https://www.w3.org">W3C</a></h1>
 	</body>
 </html>
